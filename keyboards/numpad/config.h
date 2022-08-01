@@ -8,6 +8,18 @@
  *  These options are also useful to firmware size reduction.
  */
 
+#define MATRIX_ROWS 12
+#define MATRIX_COLS 18
+
+// #define MATRIX_ROW_PINS { B12, B13, B14, B15, A8, A15 }
+// #define MATRIX_COL_PINS { B10, B2, B1, B0, A7, A6, A5, A4, A3, A2, A1, A0, C15, C14, C13, B4, B5, B8, NO_PIN, NO_PIN, NO_PIN, NO_PIN }
+
+#define MATRIX_ROW_PINS { B12, B13, B14, B15, A8, A15 }
+#define MATRIX_COL_PINS { B10, NO_PIN, B1, B0, A7, A6, A5, A4, A3, A2, A1, A0, C15, C14, C13, B4, B5, B8 }
+
+#define MATRIX_ROW_PINS_RIGHT { NO_PIN, B12, B13, B14, B15, A8 }
+#define MATRIX_COL_PINS_RIGHT { B1, B0, A7, A6, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN }
+
 /* disable debug print */
 //#define NO_DEBUG
 
@@ -19,50 +31,38 @@
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
 
+// #define DRIVER_COUNT 1
+// #define DRIVER_ADDR_1 0b1010000
 
-// This is a 7-bit address, that gets left-shifted and bit 0
-// set to 0 for write, 1 for read (as per I2C protocol)
-// The address will vary depending on your wiring:
-// 0b1110100 AD <-> GND
-// 0b1110111 AD <-> VCC
-// 0b1110101 AD <-> SCL
-// 0b1110110 AD <-> SDA
-#define DRIVER_ADDR_1 0b1110100
+// #define DRIVER_1_LED_TOTAL 17
+// #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL)
 
-#define DRIVER_COUNT 1
-#define DRIVER_1_LED_TOTAL 1
-#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL)
+// #define ENABLE_RGB_MATRIX_CYCLE_ALL
 
-#define ENABLE_RGB_MATRIX_CYCLE_ALL
+// #define RGB_MATRIX_STARTUP_HUE  169
+// #define RGB_MATRIX_STARTUP_SAT  255
+// #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_ALL
 
-#define RGB_MATRIX_STARTUP_HUE  169
-#define RGB_MATRIX_STARTUP_SAT  255
-#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_ALL
-
-
-#define I2C_DRIVER I2CD1
-
-
-
-/* key matrix size */
-#define MATRIX_ROWS 10 // Rows are doubled-up
-#define MATRIX_COLS 4
-
-#define MATRIX_COL_PINS { B1, B0, A7, A6}
-#define MATRIX_ROW_PINS { B12, B13, B14, B15, A8 }
-
-#define MATRIX_COL_PINS_RIGHT { B1, B0, A7, A6}
-#define MATRIX_ROW_PINS_RIGHT { B12, B13, B14, B15, A8 }
-
-#define SERIAL_USART_FULL_DUPLEX
-#define SERIAL_USART_TX_PIN A10
-#define SERIAL_USART_RX_PIN A9
+#define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
+#define SERIAL_USART_TX_PIN A10     // USART TX pin
+#define SERIAL_USART_RX_PIN A9     // USART RX pin
+//#define USART1_REMAP             // Remap USART TX and RX pins on STM32F103 MCUs, see table below.
+//#define SERIAL_USART_PIN_SWAP    // Swap TX and RX pins if keyboard is master halve.
+                                   // Check if this feature is necessary with your keyboard design and available on the mcu.
+#define SELECT_SOFT_SERIAL_SPEED 1 // or 0, 2, 3, 4, 5
+                                   //  0: 460800 baud
+                                   //  1: 230400 baud (default)
+                                   //  2: 115200 baud
+                                   //  3: 57600 baud
+                                   //  4: 38400 baud
+                                   //  5: 19200 baud
+#define SERIAL_USART_DRIVER SD1    // USART driver of TX and RX pin. default: SD1
+#define SERIAL_USART_TX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
+#define SERIAL_USART_RX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
+#define SERIAL_USART_TIMEOUT 20    // USART driver timeout. default 20
 
 // #define SPLIT_HAND_PIN B3 // High = right hand, low = left hand
-// #define SOFT_SERIAL_PIN A9
-// #define MASTER_LEFT
+#define SPLIT_USB_DETECT
+#define MASTER_LEFT
 
 // #define SPLIT_TRANSPORT_MIRROR // Only needed for interactive RGB
-
-// Default communication speed is 137kbps
-

@@ -17,11 +17,11 @@
 
 #pragma once
 
-#define HAL_USE_I2C TRUE
+// #define HAL_USE_I2C TRUE
 #define HAL_USE_SERIAL TRUE
 
-#define PAL_USE_CALLBACKS FALSE
+//#define PAL_USE_CALLBACKS FALSE
 
-#define PAL_USE_WAIT FALSE
+//#define PAL_USE_WAIT FALSE
 
 #include_next <halconf.h>
