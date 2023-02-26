@@ -16,6 +16,7 @@
     { L30,   L31,   L32,   L33,   L34,   L35,   L36,   L37,   L38,   L39,   L3A,   L3B,   L3C,   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, }, \
     { L40,   KC_NO, L42,   L43,   L44,   L45,   L46,   L47,   L48,   L49,   L4A,   L4B,   L4C,   KC_NO, KC_NO, KC_NO, L4G,   KC_NO, }, \
     { L50,   L51,   L52,   L53,   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, L5A,   L5B,   L5C,   L5D,   KC_NO, L5F,   L5G,   L5H,   }, \
+\
     { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO  }, \
     { R10,   R11,   R12,   R13,   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO  }, \
     { R20,   R21,   R22,   R23,   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO  }, \
