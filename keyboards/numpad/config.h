@@ -34,7 +34,7 @@
 
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COL 0
-#define BOOTMAGIC_LITE_ROW_RIGHT 1
+#define BOOTMAGIC_LITE_ROW_RIGHT 7
 #define BOOTMAGIC_LITE_COLUMN_RIGHT 0
 
 #define DRIVER_COUNT 2
@@ -77,5 +77,8 @@
 // #define SPLIT_USB_DETECT
 // #define MASTER_LEFT
 
-#define SPLIT_TRANSPORT_MIRROR   // Only needed for interactive RGB
-#define SPLIT_LAYER_STATE_ENABLE // Only needed for interactive RGB
+// #define SPLIT_TRANSPORT_MIRROR   // Only needed for interactive RGB
+// #define SPLIT_LAYER_STATE_ENABLE // Only needed for interactive RGB
+
+#define DEBOUNCE 5
+#define DEBUG_MATRIX_SCAN_RATE
