@@ -44,6 +44,7 @@
 #define DRIVER_1_LED_TOTAL 64
 #define DRIVER_2_LED_TOTAL 44
 #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+#define RGB_MATRIX_SPLIT { 64, 44 }
 
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define ENABLE_RGB_MATRIX_CYCLE_ALL
@@ -80,5 +81,5 @@
 // #define SPLIT_TRANSPORT_MIRROR   // Only needed for interactive RGB
 // #define SPLIT_LAYER_STATE_ENABLE // Only needed for interactive RGB
 
-#define DEBOUNCE 0
+#define DEBOUNCE 20
 // #define DEBUG_MATRIX_SCAN_RATE
