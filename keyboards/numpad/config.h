@@ -91,5 +91,5 @@
 // #define SPLIT_TRANSPORT_MIRROR   // Only needed for interactive RGB
 // #define SPLIT_LAYER_STATE_ENABLE // Only needed for interactive RGB
 
-#define DEBOUNCE 20
+#define DEBOUNCE 15
 // #define DEBUG_MATRIX_SCAN_RATE
