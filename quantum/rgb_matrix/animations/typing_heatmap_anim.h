@@ -80,6 +80,9 @@ bool TYPING_HEATMAP(effect_params_t* params) {
             if (g_led_config.matrix_co[row][col] >= led_min && g_led_config.matrix_co[row][col] < led_max) {
                 count++;
                 uint8_t val = g_rgb_frame_buffer[row][col];
+                if (val < RGB_MATRIX_TYPING_HEATMAP_MIN_VAL) {
+                    val = RGB_MATRIX_TYPING_HEATMAP_MIN_VAL;
+                }
                 if (!HAS_ANY_FLAGS(g_led_config.flags[g_led_config.matrix_co[row][col]], params->flags)) continue;
 
                 hsv_t hsv = {170 - qsub8(val, 85), rgb_matrix_config.hsv.s, scale8((qadd8(170, val) - 170) * 3, rgb_matrix_config.hsv.v)};

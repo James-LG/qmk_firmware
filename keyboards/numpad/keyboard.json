@@ -2,17 +2,18 @@
     "manufacturer": "James La Novara-Gsell",
     "keyboard_name": "numpad",
     "maintainer": "James La Novara-Gsell",
-    "bootloader": "stm32-dfu",
+    "development_board": "blackpill_f401",
+    // "bootloader": "stm32-dfu",
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
         "command": true,
-        "console": true,
+        "console": false,
         "extrakey": true,
         "mousekey": true,
         "nkro": true
     },
-    "processor": "STM32F411",
+    // "processor": "STM32F411",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",
